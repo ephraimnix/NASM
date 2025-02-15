@@ -5,24 +5,25 @@ section.bss
    var resb 1
 
 section.text
-  global_start
+  global _start
   
 _start :
-  boucle: 
-  move byte [var], 0
-  move al, [var],
+  mov byte [var], 0
+
+  boucle:  
+  mov al, [var]
   cmp al, 5
   je end
   inc byte [var]
   jmp boucle
 
  end : 
-  move eax, 4
-  move ebx, 1
-  move ecx, txt
-  move edx, 18
+  mov eax, 4
+  mov ebx, 1
+  mov ecx, txt
+  mov edx, 18
 
-   move eax, 1
+   mov eax, 1
    xor ebx, ebx
    int 0x80
 
