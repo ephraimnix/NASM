@@ -1,4 +1,4 @@
-section.data
+sectiondata
   txt db 'Operation terminee', 0
 
 section.bss
@@ -23,8 +23,8 @@ _start :
   mov ecx, txt
   mov edx, 18
 
-   mov eax, 1
-   xor ebx, ebx
-   int 0x80
+  mov eax, 1
+  xor ebx, ebx
+  int 0x80
 
 
